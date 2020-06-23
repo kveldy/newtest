@@ -13,4 +13,8 @@ jobs:
     steps:
     - name: Run a multi-line script
       run: |
+        export NVM_DIR=~/.nvm
+        source ~/.nvm/nvm.sh
+        nvm install $(cat .nvmrc)
         nvm use
+        
